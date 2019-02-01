@@ -1,0 +1,203 @@
+*******   NAVIGATION        *************/
+.nav{
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    background-color: #0f0f0f;
+    margin-bottom: 0px;
+}
+.navbar-collapse{
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+.navbar-nav > .open > a:hover{
+    background-color: #0f0f0f !important;
+}
+.nav > li > a:hover{
+    background-color: #0f0f0f !important;
+}
+.navbar-nav > .open > a{
+    background-color: #0f0f0f !important;
+}
+.dropdown-menu{
+    background-color: #0f0f0f !important;
+}
+
+
+
+/*******  END NAVIGATION         *************/
+
+
+
+
+
+
+
+
+/*******   LEFT NAVIGATION        *************/
+
+
+.nav{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.l-nav{
+    padding-right: 0;
+    padding-left: 0;
+}
+.l-nav-drop{
+    min-width: 100px !important;
+    width: 100%;
+}
+
+.l-nav a{
+    color: #333;
+}
+
+
+
+
+
+
+/*******  END LEFT NAVIGATION         *************/
+
+
+
+
+.cont-lnav{
+    min-height: 560px;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+
+
+
+
+/*******   CONTENT        *************/
+.content{
+
+    min-height: 560px;
+    border:1px solid red;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+
+/*******  END CONTENT         *************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid border-container cont-lnav">
+    <div class="row">
+
+        <!-- LEFT-NAVIGATION -->
+
+
+        <div class="col-md-1 col-sm-6 border-container l-nav">
+            <div class="navmenu navmenu-default navmenu-fixed-left offcanvas-sm">
+
+               <ul class="nav navmenu-nav">
+
+
+                  <!--   <li class="active"><a href="#">Пункт 1</a>
+                        <ul class="dropdown-menu navmenu-nav l-nav-drop">
+                            <li><a href="#">Подпункт 4.1</a></li>
+                            <li><a href="#">Подпункт 4.2</a></li>
+                            <li><a href="#">Подпункт 4.3</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Заголовок для подпунктов</li>
+                            <li><a href="#">Подпункт 4.4</a></li>
+                            <li><a href="#">Подпункт 4.5</a></li>
+                        </ul>
+                    </li>-->
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Пункт 1 <b class="caret"></b></a>
+                    <ul class="dropdown-menu navmenu-nav l-nav-drop">
+                        <li><a href="#">Подпункт 4.1</a></li>
+                        <li><a href="#">Подпункт 4.2</a></li>
+                        <li><a href="#">Подпункт 4.3</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Заголовок для подпунктов</li>
+                        <li><a href="#">Подпункт 4.4</a></li>
+                        <li><a href="#">Подпункт 4.5</a></li>
+                    </ul>
+                </li>
+
+
+                   <li class="dropdown">
+                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Пункт 2 <b class="caret"></b></a>
+                       <ul class="dropdown-menu navmenu-nav l-nav-drop">
+                           <li><a href="#">Подпункт 4.1</a></li>
+                           <li><a href="#">Подпункт 4.2</a></li>
+                           <li><a href="#">Подпункт 4.3</a></li>
+                           <li class="divider"></li>
+                           <li class="dropdown-header">Заголовок для подпунктов</li>
+                           <li><a href="#">Подпункт 4.4</a></li>
+                           <li><a href="#">Подпункт 4.5</a></li>
+                       </ul>
+                   </li>
+
+
+                   <li class="dropdown">
+                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Пункт 3 <b class="caret"></b></a>
+                       <ul class="dropdown-menu navmenu-nav l-nav-drop">
+                           <li><a href="#">Подпункт 4.1</a></li>
+                           <li><a href="#">Подпункт 4.2</a></li>
+                           <li><a href="#">Подпункт 4.3</a></li>
+                           <li class="divider"></li>
+                           <li class="dropdown-header">Заголовок для подпунктов</li>
+                           <li><a href="#">Подпункт 4.4</a></li>
+                           <li><a href="#">Подпункт 4.5</a></li>
+                       </ul>
+                   </li>
+
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Пункт 4 <b class="caret"></b></a>
+                        <ul class="dropdown-menu navmenu-nav l-nav-drop">
+                            <li><a href="#">Подпункт 4.1</a></li>
+                            <li><a href="#">Подпункт 4.2</a></li>
+                            <li><a href="#">Подпункт 4.3</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Заголовок для подпунктов</li>
+                            <li><a href="#">Подпункт 4.4</a></li>
+                            <li><a href="#">Подпункт 4.5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navbar1 navbar-default navbar-fixed-top hidden-md hidden-lg">
+                <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+        </div>
