@@ -240,9 +240,10 @@
                         <a href="<?php echo Url::to(['theme/create']) ?>" class="dropdown-toggle"
                            data-toggle="dropdown">Ссылочная база<b class="caret"></b></a>
                         <ul class="dropdown-menu navmenu-nav l-nav-drop">
-                            <li><a href="<?php echo Url::to(['theme/create']) ?>">Добавить</a></li>
-                            <li><a href="#">Редактировать</a></li>
-                            <li><a href="#">Удалить</a></li>
+                            <li><a href="<?php echo Url::to(['links/index']); ?>">Просмотр</a></li>
+                            <li><a href="<?php echo Url::to(['links/create']); ?>">Добавить</a></li>
+                            <li><a href="<?php echo Url::to(['links/update']); ?>">Редактировать</a></li>
+                            <li><a href="<?php echo Url::to(['links/delete']); ?>">Удалить</a></li>
 
                             <li class="divider"></li>
                         </ul>

@@ -4,6 +4,9 @@
     use yii\widgets\ActiveForm;
     use mihaildev\ckeditor\CKEditor;
     use yii\helpers\Html;
+    use kartik\depdrop\DepDrop;
+    use yii\helpers\Url;
+
 /*
    if($model->hasErrors()){
         echo '<pre>';
@@ -21,8 +24,32 @@
 <?php $form = ActiveForm::begin(); ?>
 
 <?php echo $form->field($model, 'title') ?>
-<?php echo $form->field($model, 'theme') ?>
-<?php echo $form->field($model, 'subtheme') ?>
+<?php
+$catList = [
+1 => 'Electronics',
+2 => 'Books',
+3 => 'Home & Kitchen'
+];
+
+// Parent
+echo $form->field($model, 'theme')->dropDownList($catList, ['id'=>'cat-id']);
+
+// Child # 1
+echo $form->field($model, 'subtheme')->widget(DepDrop::classname(), [
+'options'=>['id'=>'subcat-id'],
+'pluginOptions'=>[
+'depends'=>['cat-id'],
+'placeholder'=>'Select...',
+'url'=>Url::to(['/site/subcat'])
+]
+]);?>
+
+
+<?php /*echo $form->field($model, 'theme') */?><!--
+--><?php /*echo $form->field($model, 'subtheme') */?>
+
+
+
 <?php echo $form->field($model, 'content')->widget(CKEditor::className(),[
     'editorOptions' => [
         'preset' => 'full', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать

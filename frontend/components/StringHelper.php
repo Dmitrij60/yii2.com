@@ -27,4 +27,14 @@
             return mb_substr($string, 0, $limit, 'UTF-8').'...';
         }
 
+
+        public function getShortLink($string,$limit = 20 )
+        {
+            if($limit === null){
+                $limit = $this->limit;
+            }
+
+            return mb_substr($string, 0, $limit, 'UTF-8').'...';
+        }
+
     }
