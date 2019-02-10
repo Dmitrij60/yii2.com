@@ -32,21 +32,21 @@ $catList = [
 ];
 
 // Parent
-echo $form->field($model, 'theme')->dropDownList($catList, ['id'=>'cat-id']);
+//echo $form->field($model, 'theme')->dropDownList($catList, ['id'=>'cat-id']);
 
 // Child # 1
-echo $form->field($model, 'subtheme')->widget(DepDrop::classname(), [
+/*echo $form->field($model, 'subtheme')->widget(DepDrop::classname(), [
 'options'=>['id'=>'subcat-id'],
 'pluginOptions'=>[
 'depends'=>['cat-id'],
 'placeholder'=>'Select...',
 'url'=>Url::to(['/site/subcat'])
 ]
-]);?>
+]);*/?>
 
 
-<?php /*echo $form->field($model, 'theme') */?><!--
---><?php /*echo $form->field($model, 'subtheme') */?>
+<?php echo $form->field($model, 'theme') ?>
+<?php echo $form->field($model, 'subtheme') ?>
 
 
 

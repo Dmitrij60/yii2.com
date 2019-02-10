@@ -22,7 +22,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <title><?php echo ('My NoteBook'); ?></title>
     <?php $this->head() ?>
 </head>
 <body>
@@ -87,12 +87,12 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <?php echo $themeItem[0]; ?>
                                     <span class="caret"></span></a>
                                 <ul class="dropdown-menu dropdown-menu-usr" role="menu">
-                                    <li><a href="#"><?php echo $subthemeItemOS[0]; ?></a></li>
+                                    <li><a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 1]); ?>"><?php echo $subthemeItemOS[0]; ?></a></li>
                                     <li>
-                                        <a href="<?php echo Url::to(['knowledge/index']) ?>"><?php echo $subthemeItemOS[1]; ?></a>
+                                        <a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 2]); ?>"><?php echo $subthemeItemOS[1]; ?></a>
                                     </li>
-                                    <li><a href="#"><?php echo $subthemeItemOS[2]; ?></a></li>
-                                    <li><a href="#"><?php echo $subthemeItemOS[3]; ?></a></li>
+                                    <li><a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 4]); ?>"><?php echo $subthemeItemOS[2]; ?></a></li>
+                                    <li><a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 5]); ?>"><?php echo $subthemeItemOS[3]; ?></a></li>
                                     <li class="divider"></li>
 
                                 </ul>
@@ -103,9 +103,9 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $themeItem[1]; ?>
                                     <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#"><?php echo $subthemeItemNet[0]; ?></a></li>
-                                    <li><a href="#"><?php echo $subthemeItemNet[1]; ?></a></li>
-                                    <li><a href="#"><?php echo $subthemeItemNet[2]; ?></a></li>
+                                    <li><a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 12]); ?>"><?php echo $subthemeItemNet[0]; ?></a></li>
+                                    <li><a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 13]); ?>"><?php echo $subthemeItemNet[1]; ?></a></li>
+                                    <li><a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 14]); ?>"><?php echo $subthemeItemNet[2]; ?></a></li>
                                     <li class="divider"></li>
                                 </ul>
                             </li>
@@ -114,8 +114,8 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $themeItem[2]; ?>
                                     <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#"><?php echo $subthemeItemBios[0]; ?></a></li>
-                                    <li><a href="#"><?php echo $subthemeItemBios[1]; ?></a></li>
+                                    <li><a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 15]); ?>"><?php echo $subthemeItemBios[0]; ?></a></li>
+                                    <li><a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 20]); ?>"><?php echo $subthemeItemBios[1]; ?></a></li>
                                     <li class="divider"></li>
                                 </ul>
                             </li>
@@ -124,8 +124,8 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $themeItem[3]; ?>
                                     <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#"><?php echo $subthemeItemEng[0]; ?></a></li>
-                                    <li><a href="#"><?php echo $subthemeItemEng[1]; ?></a></li>
+                                    <li><a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 16]); ?>"><?php echo $subthemeItemEng[0]; ?></a></li>
+                                    <li><a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 17]); ?>"><?php echo $subthemeItemEng[1]; ?></a></li>
                                     <li class="divider"></li>
                                 </ul>
                             </li>
@@ -134,8 +134,8 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $themeItem[4]; ?>
                                     <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#"><?php echo $subthemeItemArch[0]; ?></a></li>
-                                    <li><a href="#"><?php echo $subthemeItemArch[1]; ?></a></li>
+                                    <li><a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 18]); ?>"><?php echo $subthemeItemArch[0]; ?></a></li>
+                                    <li><a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 19]); ?>"><?php echo $subthemeItemArch[1]; ?></a></li>
                                     <li class="divider"></li>
 
                                 </ul>
@@ -145,9 +145,9 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $themeItem[5]; ?>
                                     <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#"><?php echo $subthemeItemProgr[0]; ?></a></li>
-                                    <li><a href="#"><?php echo $subthemeItemProgr[1]; ?></a></li>
-                                    <li><a href="#"><?php echo $subthemeItemProgr[2]; ?></a></li>
+                                    <li><a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 3]); ?>"><?php echo $subthemeItemProgr[0]; ?></a></li>
+                                    <li><a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 6]); ?>"><?php echo $subthemeItemProgr[1]; ?></a></li>
+                                    <li><a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 7]); ?>"><?php echo $subthemeItemProgr[2]; ?></a></li>
                                     <li class="divider"></li>
 
                                 </ul>
@@ -157,10 +157,10 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $themeItem[6]; ?>
                                     <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#"><?php echo $subthemeItemWeb[0]; ?></a></li>
-                                    <li><a href="#"><?php echo $subthemeItemWeb[1]; ?></a></li>
-                                    <li><a href="#"><?php echo $subthemeItemWeb[2]; ?></a></li>
-                                    <li><a href="#"><?php echo $subthemeItemWeb[3]; ?></a></li>
+                                    <li><a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 8]); ?>"><?php echo $subthemeItemWeb[0]; ?></a></li>
+                                    <li><a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 9]); ?>"><?php echo $subthemeItemWeb[1]; ?></a></li>
+                                    <li><a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 10]); ?>"><?php echo $subthemeItemWeb[2]; ?></a></li>
+                                    <li><a href="<?php echo Url::to(['knowledge/theme', 'id_subtheme' => 11]); ?>"><?php echo $subthemeItemWeb[3]; ?></a></li>
                                     <li class="divider"></li>
                                 </ul>
                             </li>

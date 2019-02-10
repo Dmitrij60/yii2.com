@@ -22,8 +22,11 @@
         public $subt_eng;
         public $subt_arch;
 
-        public function Menu(){
 
+
+
+        public function init()
+        {
             $this->theme = Knowledge::getThemeList();
             $this->subt_os = Knowledge::getSubThemeListOS();
             $this->subt_web = Knowledge::getSubThemeListWeb();

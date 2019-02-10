@@ -70,6 +70,10 @@ class Knowledge extends Model
         return $result;
     }
 
+
+
+
+
     /*** Получить список  ***/
     public function getSubThemeListOS()
     {
@@ -145,6 +149,27 @@ class Knowledge extends Model
 
 
         return $result;
+    }
+
+    public function getSubThemeItem($id_subtheme)
+    {
+        $id = intval($id_subtheme);
+        $sql = 'SELECT knowledge.*, theme.*, subtheme.* FROM knowledge, theme, subtheme WHERE knowledge.id_theme = theme.id_theme AND knowledge.id_subtheme = subtheme.id_subtheme AND subtheme.id_subtheme ='. $id_subtheme;
+
+        $result = Yii::$app->db->createCommand($sql)->queryAll();
+
+
+        if(!empty($result) && is_array($result)) {
+
+            foreach ($result as &$item) {
+                $item['content'] = Yii::$app->stringHelper->getShort($item['content']);
+            }
+
+        }
+
+        return $result;
+
+
     }
 
 

@@ -21,23 +21,29 @@
 
             $list = Knowledge::getKnowledgeList();
 
-            $this->Menu();
-
           return $this->render('index', [
             'list' => $list,
               ]);
         }
 
+
         public function actionItem($id)
         {
 
             $item = Knowledge::getKnowledgeItem($id);
-            $this->Menu();
-
 
 
             return $this->render('item', [
                 'item' => $item, ]);
+        }
+
+
+        public function actionTheme($id_subtheme)
+        {
+            $list = Knowledge::getSubThemeItem($id_subtheme);
+
+            return $this->render('subtlist', [
+                'list' => $list, ]);
         }
 
 

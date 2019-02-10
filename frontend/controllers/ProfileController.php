@@ -20,7 +20,7 @@
 
         public function actionIndex(){
 
-            $this->Menu();
+
 
             $list = AddMailBox::getMailList();
 
@@ -34,7 +34,7 @@
         public function actionUpdate()
         {
 
-            $this->Menu();
+
 
             $formData = Yii::$app->request->post();
             $model = new ProfileUpdate();
@@ -59,7 +59,7 @@
          */
         public function actionAdd()
         {
-            $this->Menu();
+
 
             $formData = Yii::$app->request->post();
             $model = new AddMailBox();

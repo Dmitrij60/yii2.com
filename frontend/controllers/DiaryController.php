@@ -16,7 +16,7 @@
 
         public function actionAdd(){
 
-            $this->Menu();
+
             $formData = Yii::$app->request->post();
             $model = new Diary();
             if (Yii::$app->request->isPost) {

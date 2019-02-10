@@ -35,12 +35,12 @@ class LinksController extends AppController
      */
     public function actionIndex()
     {
-        $this->Menu();
+
 
         $dataProvider = new ActiveDataProvider([
             'query' => Links::find(),
             'pagination' => [
-                'pageSize' => 5,
+                'pageSize' => 4,
             ]
         ]);
 
@@ -69,7 +69,7 @@ class LinksController extends AppController
      */
     public function actionCreate()
     {
-        $this->Menu();
+
 
         $model = new Links();
 
