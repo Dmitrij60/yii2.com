@@ -62,4 +62,11 @@
             return $result;
         }
 
+        public function  getReminderDate(){
+            $sql = "SELECT date FROM reminder";
+            $result = Yii::$app->db->createCommand($sql)->queryAll();
+
+            return $result;
+        }
+
     }

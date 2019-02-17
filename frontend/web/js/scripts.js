@@ -62,6 +62,30 @@ $('select option[value=2]').hide();
             button.style.display = 'none';
         }
         button.style.display = 'none';
-
-
     };
+
+
+var block2 = document.querySelector('#block2');
+var button2 = document.querySelector('#button2');
+button2.onclick = function () {
+    if (block2.style.display === 'none') {
+        block2.style.display = 'block';
+    } else {
+        block2.style.display = 'none';
+        button2.style.display = 'none';
+    }
+    button2.style.display = 'none';
+};
+
+
+var block3 = document.querySelector('#block3');
+var button3 = document.querySelector('#button3');
+button3.onclick = function () {
+    if (block3.style.display === 'none') {
+        block3.style.display = 'block';
+    } else {
+        block3.style.display = 'none';
+        button3.style.display = 'none';
+    }
+    button3.style.display = 'none';
+};

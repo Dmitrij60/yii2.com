@@ -7,6 +7,7 @@
     border:1px solid #2b669a;
 }
 
+*/
 
 
 
@@ -20,6 +21,7 @@ body{
 
     padding-left: 0 !important;
     padding-right: 0 !important;
+    color: #adbcdc;
 }
 
 td{
@@ -42,12 +44,34 @@ html{
 
 .reminder-pre{
 
+    background-color: rgba(44, 4, 49, 0.76);
+    color: white!important;
+    width: 100%;
+}
+.reminder-pre2{
+
+   background-color: rgba(6,21,49,0.76);
+    color: white!important;
+    width: 100%;
+}
+
+.reminder-pre3{
+
+
     background-color: #022027!important;
     color: white!important;
+    width: 100%;
 }
 
 .rem-btn{
     display: block;
+
+}
+
+block-rem{
+
+
+
 }
 
 
@@ -64,7 +88,7 @@ html{
 .header{
     height: 20vh;
     /*height: 100px;*/
-    background-color: #231e1d;
+    background-color: #101014;
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
