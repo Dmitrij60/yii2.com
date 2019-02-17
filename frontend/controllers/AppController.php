@@ -10,6 +10,7 @@
 
     use frontend\models\Knowledge;
     use yii\web\Controller;
+    use frontend\models\Reminder;
 
     class AppController extends Controller
     {
@@ -21,6 +22,32 @@
         public $subt_bios;
         public $subt_eng;
         public $subt_arch;
+
+
+        public static function Reminder()
+        {
+            $time = Reminder::getReminder();
+            $current = (new \DateTime('now', new \DateTimeZone('Europe/Moscow')))->format('Y-m-d H:i');
+            $current_str = strtotime($current);
+
+            echo '<div id="block">';
+            foreach ($time as $item) {
+                $time_str = strtotime($item['date']);
+                $time_strm = $time_str - 86400;
+                $time_strp = $time_str + 86400;
+                if ($current_str < $time_strp && $current_str > $time_strm) {
+                    echo '<pre class="reminder-pre">';
+                    print_r($item['theme']);
+                    echo '</pre>';
+                   // echo '<input type="button" id="button" class="rem-btn" value="X">';
+                }
+                //  $rev = date('d/m/Y g:i:A',$current_str);
+                // echo $rev;
+            }
+            echo '</div>';
+            echo '<input type="button" id="button" class="rem-btn" value="X">';
+        }
+
 
 
 
@@ -35,6 +62,8 @@
             $this->subt_bios = Knowledge::getSubThemeListBios();
             $this->subt_eng = Knowledge::getSubThemeListEnglish();
             $this->subt_arch = Knowledge::getSubThemeListArchitecture();
+            self::Reminder();
+
 
         }
 

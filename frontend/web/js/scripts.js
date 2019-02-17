@@ -49,3 +49,19 @@ function Selected(a) {
 
 
 $('select option[value=2]').hide();
+
+
+
+    var block = document.querySelector('#block');
+    var button = document.querySelector('#button');
+    button.onclick = function () {
+        if (block.style.display === 'none') {
+            block.style.display = 'block';
+        } else {
+            block.style.display = 'none';
+            button.style.display = 'none';
+        }
+        button.style.display = 'none';
+
+
+    };

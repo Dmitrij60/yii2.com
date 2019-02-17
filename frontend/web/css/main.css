@@ -40,6 +40,16 @@ html{
     padding-right: 0 !important;
 }
 
+.reminder-pre{
+
+    background-color: #022027!important;
+    color: white!important;
+}
+
+.rem-btn{
+    display: block;
+}
+
 
 /*******   END ALL SETTINGS         *************/
 

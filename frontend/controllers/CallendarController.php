@@ -13,6 +13,16 @@ use app\modules\timetrack\models\Timetable;
 class CallendarController extends AppController
 {
 
+    public function actionReminder()
+    {
+        $current = (new \DateTime('now', new \DateTimeZone('Europe/Moscow')))->format('Y-m-d H:i');
+
+
+        return $this->render('current',[
+            'current' => $current,
+        ]);
+    }
+
     public function actionJsoncalendar($start=NULL,$end=NULL,$_=NULL){
         $times = \app\modules\timetrack\models\Timetable::find()->where(array('category'=>\app\modules\timetrack\models\Timetable::CAT_TIMETRACK))->all();
 
@@ -32,6 +42,13 @@ class CallendarController extends AppController
         echo Json::encode($events);
 
         Yii::$app->end();
+    }
+
+    public function actionJson()
+    {
+
+
+        return $this->render('Jsoncalendar');
     }
 
 

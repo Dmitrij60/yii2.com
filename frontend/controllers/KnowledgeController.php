@@ -38,13 +38,15 @@
         }
 
 
-        public function actionTheme($id_subtheme)
+        public function actionSubThemeList($id_subtheme)
         {
             $list = Knowledge::getSubThemeItem($id_subtheme);
 
             return $this->render('subtlist', [
                 'list' => $list, ]);
         }
+
+
 
 
 
